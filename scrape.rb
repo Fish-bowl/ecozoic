@@ -1,7 +1,16 @@
+# require 'pry'
+# require 'nokogiri'
+# require 'open-uri'
+
+# class Fbo
+#   base_uri = 'https://www.fbo.gov/?s=opportunity&mode=list&tab=search'
+#   doc = Nokogiri::HTML(open(base_uri))
+# end
+
+# puts doc
+
 require 'pry'
+require 'nokogiri'
+require 'open-uri'
 
-def start 
-  puts 'running'x
-end
-
-start()
+doc = Nokogiri::HTML(open("https://www.fbo.gov/?s=opportunity&mode=list&tab=search"))
